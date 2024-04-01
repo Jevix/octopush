@@ -8,3 +8,5 @@ nombre = input("Por favor, ingresa tu nombre: ")
 
 # Saludar al usuario con un mensaje personalizado
 print("Hola,", nombre + "! Bienvenido al mundo de Python.")
+
+asdjfjsdafjsadfsda
