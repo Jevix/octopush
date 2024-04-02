@@ -10,3 +10,6 @@ nombre = input("Por favor, ingresa tu nombre: ")
 print("Hola,", nombre + "! Bienvenido al mundo de Python.")
 
 asdjfjsdafjsadfsda
+
+hola gente de yt
+
