@@ -9,3 +9,5 @@ El equipo cuenta actualmente con cinco miembros:
 - Nahuel Crocombette (Programador Frontend y Analista)
 
 Nuestro primer proyecto se trata de una aplicacion web para administrar gimnasios. En ella se pueden realizar acciones como registrar usuarios y profesores, crear clases, inscirbirse a clases, etc.
+
+  # Octopush es lo mejor!
