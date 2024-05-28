@@ -1,0 +1,99 @@
+html{
+    font-family: "Work Sans", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: x-large;
+    padding: 0;
+}
+
+.container{
+    padding:1rem;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 8.5rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+legend{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.inputText{
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 1px;
+    font-size: medium;
+    font-weight: 400;
+    padding-left: 13px;
+}
+
+#inputContrasena{
+    padding-right: 80px;
+}
+
+.containerContrasena{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.buttonLogin{
+    margin-top: 14rem;
+    width: 100%;
+    height: 39px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 16px
+}
+
+.inputCheckBox{
+    width: 20px;
+    height: 20px;
+    margin-top: 12px;
+    border-radius: 0;
+}
+
+label{
+    font-size: 16px;
+    height: 10px;
+    font-weight: 400;
+}
+
+.containerRecordarme{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+i{
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.iconButton{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    position: fixed;
+    display: flex;
+    margin-top: 18px;
+    cursor: pointer;
+}
