@@ -12,3 +12,6 @@ El equipo cuenta actualmente con cuatro miembros:
 ## Proyectos en curso
 
 1. Gimnashion proshect (Sistema de gestión de turnos)
+
+
+**TEST EN README**
