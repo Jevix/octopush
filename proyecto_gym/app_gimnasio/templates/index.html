@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-login">
+        <form action="">
+            <legend class="">Accede a tu cuenta</legend>
+            <input type="text" name="" id="" placeholder="DNI" class="input-texto">
+            <div class="containerContrasena">
+                <input type="text" name="" id="inputContrasena" class="input-texto" placeholder="Contraseña">
+                <button type="button" class="icono-ojo" id="btn-ojo">
+                    <svg id="svg-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#989898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="containerRecordarme">
+                <input type="checkbox" name="" id="" class="checkbox-cuadrado">
+                <label for="" class="H7">Recordarme</label>
+            </div>
+            <button class="btn-primario-largo">Ingresar</button>
+        </form>
+        </div>
+    </div>
+    <script>
+        var inputContrasena = document.getElementById('inputContrasena');
+        var svg1 = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#989898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>'
+        var svg2 = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#989898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-off"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>'
+
+        document.getElementById('btn-ojo').addEventListener('click', function() {
+            var svgContainer = this;
+            var currentSVG = svgContainer.innerHTML.trim();
+            
+
+            if (currentSVG.includes('circle')) {
+                svgContainer.innerHTML = svg2;
+                inputContrasena.type = 'password';
+            } else {
+                svgContainer.innerHTML = svg1;
+                inputContrasena.type = 'text';
+            }
+        });
+    </script>
+</body>
+</html>

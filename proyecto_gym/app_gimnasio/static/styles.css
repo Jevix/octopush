@@ -1,0 +1,224 @@
+
+html{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(241, 245, 253, 1);
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: x-large;
+    padding: 0;
+    background-color: rgba(241, 245, 253, 1);
+}
+
+.container-login{
+    padding:1rem;
+    display: flex;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+legend{
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.input-texto{
+    width: 100%;
+    margin-top: 25px;
+    height: 48px;
+    border-radius: 15px;
+    font-size: medium;
+    font-weight: 400;
+    padding-left: 13px;
+    background-color: rgba(241, 245, 253, 1);
+    border: 2px solid rgba(159, 191, 241, 1);
+}
+
+.input-texto[type="text"]:focus {
+    outline: none;
+    border: 2px solid rgba(66, 100, 215, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+#inputContrasena{
+    padding-right: 80px;
+}
+
+.containerContrasena{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.btn-primario-largo{
+    margin-top: 40px;
+    width: 100%;
+    height: 39px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgba(46, 62, 159, 1);
+    color: rgba(239, 239, 239, 1);
+    font-weight: 600;
+}
+
+.checkbox-cuadrado[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    border-radius: 0;
+    background-color:blue;
+}
+
+.H7{
+    font-size: 16px;
+    height: 10px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.containerRecordarme{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icono-ojo{
+    border: none;
+    position: fixed;
+    display: flex;
+    margin-top: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+/* Estilos base */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(223, 233, 250, 1);
+    padding: 1rem;
+    color: white;
+}
+
+.H5 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 1);
+}
+
+.navbar-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Estilos para el botón de hamburguesa */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 16px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 1);
+    margin: 2px 0;
+    border-radius: 10px;
+}
+
+/* Estilos responsive */
+@media (max-width: 600px) {
+    .navbar-links {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 256px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.23s ease;
+        z-index: 10;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links li {
+        margin: 0.5rem 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}
+
+/* Estilos para el estado activo del menú */
+.navbar-links.active {
+    left: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
