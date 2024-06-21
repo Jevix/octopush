@@ -5,7 +5,7 @@ __pycache__
 db.sqlite3
 media/
 staticfiles/
-
+db.sqlite3
 # Ignorar archivos de configuración local (pueden variar según tu entorno)
 venv/
 .env
