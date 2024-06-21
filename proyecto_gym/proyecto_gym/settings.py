@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#epd$&^ph4p5hm9r0=zix0j88)buio@&#v+e^a_p^ufej5w4e2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True   
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 ROOT_URLCONF = 'proyecto_gym.urls'
 
@@ -118,6 +120,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+LOGIN_REDIRECT_URL = '/home/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

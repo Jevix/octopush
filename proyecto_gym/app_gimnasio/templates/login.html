@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,35 +13,31 @@
 <body>
     <div class="container">
         <div class="container-login">
-            <form method="post" action="{% url 'index' %}">
-                {% csrf_token %}
-                <legend class="">Accede a tu cuenta</legend>
-                <input type="text" name="inputUser" id="inputUser" placeholder="DNI" class="input-texto">
-                <div class="containerContrasena">
-                    <input type="password" name="inputContrasena" id="inputContrasena" class="input-texto" placeholder="Contraseña">
-                    <button type="button" class="icono-ojo" id="btn-ojo">
-                        <svg id="svg-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#989898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="containerRecordarme">
-                    <input type="checkbox" name="recordarme" id="recordarme" class="checkbox-cuadrado">
-                    <label for="recordarme" class="H7">Recordarme</label>
-                </div>
-                <button type="submit" class="btn-primario-largo">Ingresar</button>
-                {% if error_message %}
-                <p style="color: red;">{{ error_message }}</p>
-                {% endif %}
-                {% if warning_message %}
-                <p style="color: rgb(234, 255, 0);">{{ warning_message }}</p>
-                {% endif %}
-                {% if success_message %}
-                <p style="color: green;">{{ success_message }}</p>
-                {% endif %}
-            </form>
-
+            
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <legend class="">Accede a tu cuenta</legend>
+            <input type="text" name="inputDni" id="inputDni" placeholder="DNI" class="input-texto">
+            <div class="containerContrasena">
+                <input type="text" name="inputContrasena" id="inputContrasena" class="input-texto" placeholder="Contraseña">
+                <button type="button" class="icono-ojo" id="btn-ojo">
+                    <svg id="svg-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#989898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="containerRecordarme">
+                <input type="checkbox" name="" id="" class="checkbox-cuadrado">
+                <label for="" class="H7">Recordarme</label>
+            </div>
+            <button type="submit" class="btn-primario-largo">Ingresar</button>
+            
+            {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+            
+        </form>
+        
         </div>
     </div>
     <script>
@@ -64,12 +59,5 @@
             }
         });
     </script>
-=======
-    <title>GimPro</title>
-</head>
-<body>
-    <h1>Gimpro</h1>
-    
->>>>>>> origin/backend
 </body>
 </html>
