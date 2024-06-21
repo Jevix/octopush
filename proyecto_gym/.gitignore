@@ -1,0 +1,41 @@
+# Ignorar archivos y directorios específicos de Django
+*.pyc
+*.pyo
+__pycache__
+db.sqlite3
+media/
+staticfiles/
+
+# Ignorar archivos de configuración local (pueden variar según tu entorno)
+venv/
+.env
+
+# Ignorar archivos de logs y sesiones
+logs/
+*.log
+
+# Ignorar archivos de entorno y dependencias
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.envrc
+.env.work
+.env.local.work
+.env.override
+.pipenv
+pipfile.lock
+
+# Ignorar archivos de IDE y editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos de sistema operativo y otros archivos generados automáticamente
+*.DS_Store
+Thumbs.db
+node_modules/
+*.sqlite3
