@@ -8,7 +8,7 @@ class Alumno(models.Model):
     telefono = models.CharField(max_length=15)
     documento = models.CharField(max_length=20)
     cantTokens = models.IntegerField(default=0)
-    contraseña = models.CharField(max_length=100)  # Asegúrate de almacenar la contraseña de manera segura
+    contraseña = models.CharField(max_length=100) 
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'
