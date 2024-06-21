@@ -5,7 +5,11 @@ __pycache__
 db.sqlite3
 media/
 staticfiles/
+<<<<<<< HEAD
 db.sqlite3
+=======
+
+>>>>>>> frontend
 # Ignorar archivos de configuración local (pueden variar según tu entorno)
 venv/
 .env
@@ -38,4 +42,7 @@ pipfile.lock
 *.DS_Store
 Thumbs.db
 node_modules/
+<<<<<<< HEAD
 *.sqlite3
+=======
+>>>>>>> frontend
