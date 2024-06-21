@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-<<<<<<< HEAD
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.http import HttpResponse

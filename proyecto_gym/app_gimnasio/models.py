@@ -1,8 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-=======
-
 
 class Alumno(models.Model):
     idAlumno = models.AutoField(primary_key=True)
@@ -15,4 +11,3 @@ class Alumno(models.Model):
 
     def __str__(self):
         return f'{self.nombre} {self.apellido}'
->>>>>>> origin/backend
