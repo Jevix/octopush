@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar Usuario</title>
     {% load static %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,16 +34,47 @@
                 {% if tipousuario == 'Administrador' %}
                 <li><a href="{% url 'agregarClase' %}">Agregar Clase</a></li>
                 {%endif%}
-                <li><a href="#">{{tipousuario}}</a></li>
-
 
                 <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
             </ul>
         </div>
     </nav>
 </div>
-
 <div class="overlay" id="overlay"></div>
+
+
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <legend class="H5">Ingresar Usuario</legend>
+            <input type="text" name="inputName" placeholder="Nombre" class="input-texto" required>
+            <input type="text" name="inputSurname" placeholder="Apellido" class="input-texto" required>
+            <input type="text" name="inputDni" placeholder="DNI" class="input-texto" required>
+            <input type="text" name="inputTel" placeholder="Telefono" class="input-texto">
+            <div class="containerContrasena">
+            <input type="password" name="inputContrasena" id="inputContrasena" class="input-texto" placeholder="Contraseña" required>
+            <select name="inputRol" class="input-texto" required>
+                <option>Usuario</option>
+                <option>Profesor</option>
+                <option>Admin</option>
+            </select>
+            <button type="button" class="icono-ojo" id="btn-ojo"></button>
+            </div>
+            <button type="submit" class="btn-primario-largo">Agregar Usuario</button>
+            {% if success_message %}
+            <p style="color: green;">{{ success_message }}</p>
+            {% endif %}
+            {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+        </form>
+    </div>
+
+    
+    
+    
+    
+    
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleButton = document.getElementById('toggle-button');
