@@ -1,11 +1,13 @@
 
 html{
     font-family: "Roboto", sans-serif;
+    height: 100vh;
 }
 
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -120,7 +122,6 @@ legend{
 
 /* Estilos base */
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -141,10 +142,6 @@ legend{
     padding: 0;
     margin: 0;
     display: flex;
-}
-
-.navbar-links li {
-    margin-left: 1rem;
 }
 
 .navbar-links a {
@@ -168,6 +165,32 @@ legend{
     border-radius: 10px;
 }
 
+.main{
+    height: 100vh;
+    background-color: rgba(241, 245, 253, 1);
+}
+
+.imagen{
+    width: 100%;
+}
+
+.home-title{
+    background-color: blueviolet;
+    padding: 0 16px;
+}
+
+.box-title img{
+    width: 50px;
+    height: 50px;
+}
+
+.box{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 10px rgba(46, 62, 159, 0.25);
+}
+
+
 /* Estilos responsive */
 @media (max-width: 600px) {
     .navbar-links {
@@ -183,7 +206,7 @@ legend{
         justify-content: start;
         transition: left 0.23s ease;
         z-index: 10;
-        padding: 15px;
+        padding: 15px 15px 0 15px;
         font-weight: 600;
     }
 
@@ -194,8 +217,7 @@ legend{
     }
 
     .close-sidebar{
-        padding-bottom: 20px;
-        margin: 0;
+        height: 44px;
     }
 
     #close-sidebar{
@@ -206,15 +228,18 @@ legend{
         border-radius: 10px;
     }
 
+    .sidebar-icon{
+        height: 34px;
+        margin: 5px 10px;
+    }
+
     #close-sidebar:hover{
         transition: ease 0.2s;
         background-color:rgba(46, 62, 159, 0.15);
     }
 
     .navbar-links li {
-        margin: 5px 0;
         display: flex;
-        height: 34px;
     }
 
     .navbar-links .linea{
