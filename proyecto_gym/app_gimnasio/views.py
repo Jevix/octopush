@@ -96,3 +96,129 @@ def logout(request):
     if 'alumno_id' in request.session:
         del request.session['alumno_id']
     return redirect('login')
+
+
+def clases(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Administrador':
+                    return render(request, 'clases.html', {'tipousuario': tipousuario , 'alumno':alumno}) #Usuario
+                elif tipousuario == 'Profesor':
+                    return render(request, 'clases.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                else:
+                    return render(request, 'clases.html', {'tipousuario': tipousuario  , 'alumno':alumno})
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+            
+        
+    return redirect('login')
+
+def reservas(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Administrador':
+                    return render(request, 'reservas.html', {'tipousuario': tipousuario , 'alumno':alumno}) #Usuario
+                elif tipousuario == 'Profesor':
+                    return render(request, 'reservas.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                else:
+                    return render(request, 'reservas.html', {'tipousuario': tipousuario  , 'alumno':alumno})
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+            
+        
+    return redirect('login')
+            
+
+def cuotas(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Administrador':
+                    return render(request, 'cuotas.html', {'tipousuario': tipousuario , 'alumno':alumno}) #Usuario
+                elif tipousuario == 'Profesor':
+                    return render(request, 'cuotas.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                else:
+                    return render(request, 'cuotas.html', {'tipousuario': tipousuario  , 'alumno':alumno})
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+            
+        
+    return redirect('login')
+
+def perfil(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Administrador':
+                    return render(request, 'perfil.html', {'tipousuario': tipousuario , 'alumno':alumno}) #Usuario
+                elif tipousuario == 'Profesor':
+                    return render(request, 'perfil.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                else:
+                    return render(request, 'perfil.html', {'tipousuario': tipousuario  , 'alumno':alumno})
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+            
+        
+    return redirect('login')
+
+
+def usuarios(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Usuario':
+                    return redirect('home') #Usuario
+                elif tipousuario == 'Administrador':    
+                    return render(request, 'usuarios.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                    
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+
+    
+
+def notificaciones(request):
+    alumno_id = request.session.get('alumno_id')
+    if alumno_id:
+            try:
+                #Pagina de inicio Home
+                alumno = Alumno.objects.get(pk=alumno_id)
+                tipousuario = Alumno.objects.get(pk=alumno_id).tipousuario
+                if tipousuario == 'Administrador':
+                    return render(request, 'notificacion.html', {'tipousuario': tipousuario , 'alumno':alumno}) #Usuario
+                elif tipousuario == 'Profesor':
+                    return render(request, 'notificacion.html', {'tipousuario': tipousuario  , 'alumno':alumno})#Administrador
+                else:
+                    return render(request, 'notificacion.html', {'tipousuario': tipousuario  , 'alumno':alumno})
+                
+            except Alumno.DoesNotExist:
+                del request.session['alumno_id']
+
+
+
+
+
+
+
+
