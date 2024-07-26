@@ -10,8 +10,7 @@ body{
     overflow: hidden;
 }
 
-.container {
-    font-family: Arial, sans-serif;
+.main-content {
     margin: 0;
     padding: 0;
     background-color: rgba(241, 245, 253, 1);
@@ -172,24 +171,187 @@ legend{
 
 .imagen{
     width: 100%;
+    margin: 0;
 }
 
-.home-title{
-    background-color: blueviolet;
+.main_title{
     padding: 0 16px;
+    height: 60px;
+    margin: 5px 0 10px;
+    display: inline-flex;
+    width: 100%;
 }
 
-.box-title img{
-    width: 50px;
-    height: 50px;
+.main_title img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
 }
 
-.box{
+.title{
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.bento{
+    display: flex;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 6px 10px rgba(46, 62, 159, 0.25);
+    gap: 5px;
+    flex-direction: column;
 }
 
+.large-simple{
+    padding: 15px 27px 25px 27px;
+}
+
+.main_bento_container{
+    display: flex;
+    padding: 0 16px;
+    gap: 8px;
+    flex-direction: column;
+}
+
+h6{
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+
+h4{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.large-simple-section-1{
+    display: flex;
+    width: 100%;
+    height: 44px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.large-simple-section-1 img{
+    width: 30px;
+}
+
+.large-simple-section-2{
+    height: 40px;
+}
+
+.bento-short-container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.short-simple{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 25px 0;
+}
+
+.short-profesores{
+    width: 50%;
+    /* padding: 15px 23px 15px 26px; */
+    align-items: center;
+    justify-content: start;
+    display: flex;
+}
+
+.short-profesores .section-1{
+    display: flex;
+    align-items: start;
+    display: inline;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.short-profesores .section-2{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+.short-profesores .section-2 img{
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.short-profesores .section-2 .bento_img-profesor-1{
+    width: 34px;
+    border: 2px solid white;
+    margin-left: -50px;
+}
+
+.short-profesores .section-2 .bento_img-profesor-2{
+    width: 34px;
+    border: 2px solid white;
+    margin-left: -25px;
+}
+
+.short-profesores .section-2 .bento_img-profesor-3{
+    width: 34px;
+    border: 2px solid white;
+    margin-left:0px;
+}
+
+.bento_img-arrow{
+    width: 30px;
+    margin-left:35px;
+}
+
+.large-horarios{
+    padding: 15px 25px;
+}
+
+.large-horarios .section-3{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: rgba(165, 90, 185, 1);
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+}
+
+.large-horarios .section-3 h6{
+    color: white;
+    font-size: 20px;
+}
+
+
+.large-horarios .bento_img-profesor-1{
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border: 2px solid #853999;
+}
+
+.cant-users{
+    display: flex;
+    background-color: rgba(133, 57, 153, 1);
+    width: 45px;
+    height: 34px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Estilos responsive */
 @media (max-width: 600px) {

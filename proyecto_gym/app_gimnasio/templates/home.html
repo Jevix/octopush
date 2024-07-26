@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-<div class="container">
+<main class="main-content">
     <nav class="navbar">
         <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
             <span class="bar"></span>
@@ -38,19 +38,57 @@
     </nav>
     <div class="main">
         <img src="{% static 'images/bg-home-2.png' %}" alt="" class="imagen">
-        <div class="home-title">
-            <div class="box-title">
-                <img src="{% static 'images/img-title.jfif' %}" alt="">
+        <div class="main_title">
+            <img src="{% static 'images/img-title.jfif' %}" alt="">
+            <h1 class="title">Fitness First</h1>
+        </div>
+        <div class="main_bento_container">
+            <div class="bento large-simple">
+                <div class="large-simple-section-1">
+                    <h6>Tu cuota actual</h6>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ9JREFUSEvtlMENhDAMBIdOoBOuEzqBqwRRCa3QCchSHgjQ2d6DH/nkE80k61UqHl7Vw3xegZuwElEPTMDi0iE9A4MPBf6JSLIvqIEZsN1e4EqyAkslJVEEKYkqCEt+CdZIS3ZnLmdyt6A5XurfiEagLY06wU2mCqxJLlwVhOGKIAVXBF2JxhpzmfkdQ7b/6ButsDrkKF9u0SsIJ+Ae3AArIiEZqLDdhgAAAABJRU5ErkJggg=="/>
+                </div>
+                <div class="large-simple-section-2">
+                    <h4>Musculación x5</h4>
+                </div>
+            </div>
+            <div class="bento-short-container">
+                <div class="bento short-simple">
+                    <h6>Días restantes</h6>
+                    <h4>17 días</h4>
+                </div>
+                <div class="bento short-profesores">
+                    <div class="section-1">
+                        <h6>Conoce a tus profesores</h6>
+                    </div>
+                    <div class="section-2">
+                        <img class="bento_img-profesor-1" src="{% static 'images/profesor-1.png' %}" alt="">
+                        <img class="bento_img-profesor-2" src="{% static 'images/profesor-2.png' %}" alt="">
+                        <img class="bento_img-profesor-3" src="{% static 'images/profesor-3.png' %}" alt="">
+                        <img class="bento_img-arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ9JREFUSEvtlMENhDAMBIdOoBOuEzqBqwRRCa3QCchSHgjQ2d6DH/nkE80k61UqHl7Vw3xegZuwElEPTMDi0iE9A4MPBf6JSLIvqIEZsN1e4EqyAkslJVEEKYkqCEt+CdZIS3ZnLmdyt6A5XurfiEagLY06wU2mCqxJLlwVhOGKIAVXBF2JxhpzmfkdQ7b/6ButsDrkKF9u0SsIJ+Ae3AArIiEZqLDdhgAAAABJRU5ErkJggg=="/>
+                    </div>
+                </div>
+            </div>
+            <div class="bento large-horarios">
+                <div class="section-1">
+                    <h6>Reserva tu próxima clase</h6>
+                </div>
+                <div class="section-2">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvFldFtwzAMRJlJkk6SdpK0kzSdpNmkySTJJq0eoBNoWqLdDyMGDCf2iccjj9LONr52G8e3NQSvZnY0M57cj/K81uet/h7mmREczOy7Bs2EQvhWCWe4EcFnQZ4rmgCXEkTZQoySfQn6Xr7xX5ivyNAj8MEhmS1yQQh+csnM8JGABfcaANnUes2Fop+q5MOviwSAAFMSgPH6rS8y5ZTrRQs9kHrS1AkgMGQE3hRNvSdQ7bO6ZwTkMovhCcgeFZSGEvWuJQL1gt6hYjJoNBeZ1I8yZQQjjEzSyuwVrCEQJhuuiUpPIAdl9iRDcBquOMEySnPhf5tM2TxJ7FfaZD8szceDXmi7iGZQFRqxV+B9PBq0bKrlwuag6CLJ11aR2TUSST3vJz3sjbwaBXhps/PD1cX3COIOqQPGHy5gOIS0XQ+TedqBoxqTqW4dm3zrqeoaYM2ZnDln8dvmBH8bW2MZsOAaVAAAAABJRU5ErkJggg=="/>
+                    <h4>11:00</h4>
+                </div>
+                <div class="section-3">
+                    <h6>Musculación</h6>
+                    <div class="cant-users">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                        <h6>4</h6>
+                    </div>
+                    <img class="bento_img-profesor-1" src="{% static 'images/profesor-1.png' %}" alt="">
+                </div>
             </div>
         </div>
-        <div class="box "></div>
-        <div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="box"></div>
     </div>
-</div>
+</main>
 <div class="overlay" id="overlay"></div>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
