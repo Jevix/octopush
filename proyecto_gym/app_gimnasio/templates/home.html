@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-<div class="container">
+<main class="main-content">
     <nav class="navbar">
         <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
             <span class="bar"></span>
@@ -24,6 +24,13 @@
         <a href="{% url 'notificaciones' %}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z"></path></svg></a>
         <div class="navbar-links" id="navbar-links">
             <ul>
+<<<<<<<<< Temporary merge branch 1
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+=========
                 <li class="close-sidebar"><a href="#" id="close-sidebar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></a></li>
                 <li class="sidebar-icon"><a href="{% url 'home' %}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><p>Inicio</p></a></li>
                 <li class="linea"><hr></li>
@@ -34,27 +41,66 @@
                 <li class="sidebar-icon"><a href="{% url 'usuarios' %}"><svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 19C17 16.8783 16.1571 14.8434 14.6569 13.3431C13.1566 11.8429 11.1217 11 9 11C6.87827 11 4.84344 11.8429 3.34315 13.3431C1.84285 14.8434 1 16.8783 1 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 11C11.7614 11 14 8.76142 14 6C14 3.23858 11.7614 1 9 1C6.23858 1 4 3.23858 4 6C4 8.76142 6.23858 11 9 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 18C21 14.63 19 11.5 17 10C17.6574 9.50678 18.1831 8.8591 18.5306 8.11428C18.878 7.36946 19.0365 6.55048 18.992 5.72981C18.9475 4.90914 18.7014 4.1121 18.2755 3.40921C17.8495 2.70633 17.2569 2.11927 16.55 1.70001" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Usuarios</p></a></li>
                 {%endif%}
                 <li class="linea"><hr></li>
-                <li class="sidebar-icon"><a href="{% url 'perfil' %}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg><p>Mi perfil</p></a></li>
-                <li class="sidebar-icon"><a href="{% url 'logout' %}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg><p>Cerrar sesión</p></a></li>
+                <li class="sidebar-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg><p>Mi perfil</p></a></li>
+                <li class="sidebar-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><p>Configuración</p></a></li>
+                <li class="sidebar-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg><p>Cerrar sesión</p></a></li>
+>>>>>>>>> Temporary merge branch 2
             </ul>
         </div>
     </nav>
     <div class="main">
         <img src="{% static 'images/bg-home-2.png' %}" alt="" class="imagen">
-        <div class="home-title">
-            <div class="box-title">
-                <img src="{% static 'images/img-title.jfif' %}" alt="">
+        <div class="main_title">
+            <img src="{% static 'images/img-title.jfif' %}" alt="">
+            <h1 class="title">Fitness First</h1>
+        </div>
+        <div class="main_bento_container">
+            <div class="bento large-simple">
+                <div class="large-simple-section-1">
+                    <h6>Tu cuota actual</h6>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ9JREFUSEvtlMENhDAMBIdOoBOuEzqBqwRRCa3QCchSHgjQ2d6DH/nkE80k61UqHl7Vw3xegZuwElEPTMDi0iE9A4MPBf6JSLIvqIEZsN1e4EqyAkslJVEEKYkqCEt+CdZIS3ZnLmdyt6A5XurfiEagLY06wU2mCqxJLlwVhOGKIAVXBF2JxhpzmfkdQ7b/6ButsDrkKF9u0SsIJ+Ae3AArIiEZqLDdhgAAAABJRU5ErkJggg=="/>
+                </div>
+                <div class="large-simple-section-2">
+                    <h4>Musculación x5</h4>
+                </div>
+            </div>
+            <div class="bento-short-container">
+                <div class="bento short-simple">
+                    <h6>Días restantes</h6>
+                    <h4>17 días</h4>
+                </div>
+                <div class="bento short-profesores">
+                    <div class="section-1">
+                        <h6>Conoce a tus profesores</h6>
+                    </div>
+                    <div class="section-2">
+                        <img class="bento_img-profesor-1" src="{% static 'images/profesor-1.png' %}" alt="">
+                        <img class="bento_img-profesor-2" src="{% static 'images/profesor-2.png' %}" alt="">
+                        <img class="bento_img-profesor-3" src="{% static 'images/profesor-3.png' %}" alt="">
+                        <img class="bento_img-arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ9JREFUSEvtlMENhDAMBIdOoBOuEzqBqwRRCa3QCchSHgjQ2d6DH/nkE80k61UqHl7Vw3xegZuwElEPTMDi0iE9A4MPBf6JSLIvqIEZsN1e4EqyAkslJVEEKYkqCEt+CdZIS3ZnLmdyt6A5XurfiEagLY06wU2mCqxJLlwVhOGKIAVXBF2JxhpzmfkdQ7b/6ButsDrkKF9u0SsIJ+Ae3AArIiEZqLDdhgAAAABJRU5ErkJggg=="/>
+                    </div>
+                </div>
+            </div>
+            <div class="bento large-horarios">
+                <div class="section-1">
+                    <h6>Reserva tu próxima clase</h6>
+                </div>
+                <div class="section-2">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvFldFtwzAMRJlJkk6SdpK0kzSdpNmkySTJJq0eoBNoWqLdDyMGDCf2iccjj9LONr52G8e3NQSvZnY0M57cj/K81uet/h7mmREczOy7Bs2EQvhWCWe4EcFnQZ4rmgCXEkTZQoySfQn6Xr7xX5ivyNAj8MEhmS1yQQh+csnM8JGABfcaANnUes2Fop+q5MOviwSAAFMSgPH6rS8y5ZTrRQs9kHrS1AkgMGQE3hRNvSdQ7bO6ZwTkMovhCcgeFZSGEvWuJQL1gt6hYjJoNBeZ1I8yZQQjjEzSyuwVrCEQJhuuiUpPIAdl9iRDcBquOMEySnPhf5tM2TxJ7FfaZD8szceDXmi7iGZQFRqxV+B9PBq0bKrlwuag6CLJ11aR2TUSST3vJz3sjbwaBXhps/PD1cX3COIOqQPGHy5gOIS0XQ+TedqBoxqTqW4dm3zrqeoaYM2ZnDln8dvmBH8bW2MZsOAaVAAAAABJRU5ErkJggg=="/>
+                    <h4>11:00</h4>
+                </div>
+                <div class="section-3">
+                    <h6>Musculación</h6>
+                    <div class="cant-users">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                        <h6>4</h6>
+                    </div>
+                    <img class="bento_img-profesor-1" src="{% static 'images/profesor-1.png' %}" alt="">
+                </div>
             </div>
         </div>
-        <div class="box "></div>
-        <div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-        <div class="box"></div>
     </div>
 </div>
-
 <div class="overlay" id="overlay"></div>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
