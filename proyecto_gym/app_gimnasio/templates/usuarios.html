@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -39,9 +40,71 @@
             </ul>
         </div>
     </nav>
-    <h1>Usuarios Proximamente</h1>
+    <div class="container">
+        <form method="get" action="">
+            <input type="search" id="site-search" name="q" placeholder="Buscar usuario" value="{{ query|default_if_none:'' }}" />
+            <select name="tipo">
+                <option value="">Todos</option>
+                <option value="Profesor" {% if filtro_tipo == "Profesor" %}selected{% endif %}>Profesor</option>
+                <option value="Usuario" {% if filtro_tipo == "Usuario" %}selected{% endif %}>Usuario</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        {% for Usuarioxs in Usuarioxs %}
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ Usuarioxs.nombre }} {{ Usuarioxs.apellido }}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{ Usuarioxs.contraseña }}</p>
+            </div>
+            <div class="card-body">
+                <p>{{ Usuarioxs.documento }}</p>
+            </div>
+            <div class="card-body">
+                <p>{{ Usuarioxs.telefono }}</p>
+            </div>
+            <div class="card-body">
+                <p>{{ Usuarioxs.mail }}</p>
+            </div>
+           
+            <div class="card-footer">
+                <p>{{ Usuarioxs.tipousuario }}</p>
+            </div>
+            <div class="card" id="usuario-{{ Usuarioxs.id }}">
+                <div class="card-header">
+                    <h2>{{ Usuarioxs.username }}</h2>
+                    <button class="delete-button" onclick="deleteUser({{ Usuarioxs.idUsuario }})">Eliminar</button>
+                </div>
+                <div class="card-body">
+                    <p>{{ Usuarioxs.email }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No users found.</p>
+        {% endfor %}
 
-<div class="overlay" id="overlay"></div>
+        <div class="pagination">
+            <span class="step-links">
+                {% if Usuarioxs.has_previous %}
+                    <a href="?{% if query %}q={{ query }}&{% endif %}{% if filtro_tipo %}tipo={{ filtro_tipo }}&{% endif %}page=1">&laquo; first</a>
+                    <a href="?{% if query %}q={{ query }}&{% endif %}{% if filtro_tipo %}tipo={{ filtro_tipo }}&{% endif %}page={{ Usuarioxs.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ Usuarioxs.number }} of {{ Usuarioxs.paginator.num_pages }}.
+                </span>
+
+                {% if Usuarioxs.has_next %}
+                    <a href="?{% if query %}q={{ query }}&{% endif %}{% if filtro_tipo %}tipo={{ filtro_tipo }}&{% endif %}page={{ Usuarioxs.next_page_number }}">next</a>
+                    <a href="?{% if query %}q={{ query }}&{% endif %}{% if filtro_tipo %}tipo={{ filtro_tipo }}&{% endif %}page={{ Usuarioxs.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleButton = document.getElementById('toggle-button');
@@ -73,5 +136,31 @@
     });
 
     </script>
+
+
+<script>
+    function deleteUser(useridUsuario) {
+        if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+            $.ajax({
+                url: '{% url "delete_usuario" id=0 %}'.replace('0', useridUsuario),
+                type: 'DELETE',
+                headers: {'X-CSRFToken': '{{ csrf_token }}'},
+                success: function(response) {
+                    alert(response.message);
+                    $('#usuario-' + useridUsuario).remove();
+                },
+                error: function(xhr, status, error) {
+                    alert('Error al eliminar el usuario: ' + error);
+                }
+            });
+        }
+    }
+
+    // Asegurarse de que el DOM esté completamente cargado antes de ejecutar scripts
+    $(document).ready(function() {
+        // Aquí puedes añadir más código JavaScript que dependa del DOM
+    });
+</script>
+
 </body>
 </html>
