@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="section1">
+      <img src="./img/logo.png" alt="" />
+    </section>
+    <section class="section2">
+      <form action="" class="section2__form" id="loginForm">
+        <div class="section2__form__container">
+          <label for="username"> DNI </label>
+          <input type="text" id="username" name="username" required />
+          <p class="error">No se encontró usuario con este DNI</p>
+        </div>
+        <div class="section2__form__container">
+          <label for="password">
+            Contraseña
+            <p class="description">Tu fecha de nacimiento (díamesaño)</p>
+          </label>
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Ej: 25052005"
+          />
+          <img
+            src="./img/viendo.svg"
+            alt=""
+            class="show_password"
+            id="show_password"
+          />
+          <p class="error">Contraseña incorrecta</p>
+        </div>
+        <button type="submit" class="submit submit--off" id="submitButton">
+          Ingresar
+        </button>
+      </form>
+    </section>
+    <script>
+      document
+        .getElementById("show_password")
+        .addEventListener("click", function () {
+          var input = document.getElementById("password");
+          if (this.src.includes("viendo.svg")) {
+            this.src = "./img/censurado.svg";
+            input.type = "text";
+          } else {
+            this.src = "./img/viendo.svg";
+            input.type = "password";
+          }
+        });
+
+      const form = document.getElementById("loginForm");
+      const submitButton = document.getElementById("submitButton");
+
+      form.addEventListener("input", () => {
+        const username = document.getElementById("username").value.trim(); // Obtener valor del input de usuario
+        const password = document.getElementById("password").value.trim(); // Obtener valor del input de contraseña
+
+        if (username && password) {
+          submitButton.classList.remove("submit--off");
+          submitButton.classList.add("submit--on");
+          submitButton.disabled = false; // Habilita el botón
+        } else {
+          submitButton.classList.remove("submit--on");
+          submitButton.classList.add("submit--off");
+          submitButton.disabled = true; // Deshabilita el botón
+        }
+      });
+    </script>
+  </body>
+</html>
