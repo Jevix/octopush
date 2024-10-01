@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +45,7 @@
             type="submit"
             class="btn-primary submit--off"
             id="submitButton"
+            onclick="window.location.href='./home.html'"
           >
             Ingresar
           </button>
@@ -82,6 +83,10 @@
           submitButton.disabled = true; // Deshabilita el botón
         }
       });
+
+      function redirigir() {
+        window.location.href = "./"; // URL a la que deseas redirigir
+      }
     </script>
   </body>
 </html>

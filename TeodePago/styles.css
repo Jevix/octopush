@@ -8,7 +8,7 @@
 /* ESTILOS GLOBALES */
 
 html {
-  margin: auto;
+  margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
@@ -77,7 +77,6 @@ body {
 
 .hb {
   color: var(--Neutral-10, #000);
-  text-align: center;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -92,6 +91,54 @@ body {
 .text--minus {
   color: #c82828;
 }
+
+.text--blue {
+  color: #1b72ba;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: 54px;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #0f6eff;
+  background: #fff;
+  color: var(--Neutral-10, #000);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: var(--Neutral-10, #000);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+input:focus {
+  border: 2px solid #0f6eff;
+  background-color: transparent;
+}
+
+.submit--off {
+  background-color: #9ebbd3;
+  cursor: auto;
+}
+
+.submit--on {
+  background-color: #1b72ba;
+  cursor: pointer;
+}
+
 /* LOGIN */
 
 .login {
@@ -130,14 +177,6 @@ body {
   position: relative;
 }
 
-.form-container label {
-  color: var(--Neutral-10, #000);
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
 .form-container label .description {
   color: var(--Neutral-10, #000);
   font-size: 15px;
@@ -163,54 +202,12 @@ body {
   display: flex;
 }
 
-.form-container input {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  height: 54px;
-  padding: 15px 20px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  border: 1px solid #0f6eff;
-  background: #fff;
-  color: var(--Neutral-10, #000);
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  transition: all 0.3s ease;
-}
-
-.form-container input::placeholder {
-  color: var(--Neutral-10, #000);
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 500;
-  opacity: 0.5;
-  flex-shrink: 0;
-}
-
-.form-container input:focus {
-  border: 2px solid #0f6eff;
-}
-
 .form-container .show_password {
   position: absolute;
   margin-top: -35px;
   opacity: 0.5;
   display: flex;
   right: 20px;
-}
-
-.section2__form .submit--off {
-  background-color: #9ebbd3;
-  cursor: auto;
-}
-
-.section2__form .submit--on {
-  background-color: #1b72ba;
-  cursor: pointer;
 }
 
 /* HOME USER */
@@ -228,7 +225,7 @@ body {
   box-sizing: border-box;
   position: relative;
   min-height: 580px;
-  min-width: 355px;
+  min-width: 300px;
 }
 
 .home-user .navbar {
@@ -262,6 +259,10 @@ body {
   margin: 0;
 }
 
+.home-user .navbar .right .salir {
+  cursor: pointer;
+}
+
 .home-user .dinero {
   display: flex;
   width: 176px;
@@ -274,7 +275,7 @@ body {
   display: flex;
   width: 100%;
   padding: 10px 46px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-radius: 10px;
   background: #fff;
@@ -296,6 +297,7 @@ body {
   align-items: center;
   gap: 5px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .home-user .movimientos {
@@ -362,6 +364,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
 }
 
 .home-user .movimientos .container .movimiento .right {
@@ -387,7 +390,7 @@ body {
 
 /* TRANSFERIR */
 
-.transferir-user{
+.transferir-user {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -401,29 +404,107 @@ body {
   box-sizing: border-box;
   position: relative;
   min-height: 580px;
-  min-width: 355px;
+  min-width: 300px;
 }
 
-.transferir-user .background{
+.transferir-user .background {
   height: 100%;
   z-index: -1;
   position: absolute;
   top: 100px;
 }
 
-.transferir-user .navbar{
+.transferir-user .navbar {
   display: inline-flex;
   gap: 44px;
   align-items: center;
   margin: 27px 0;
 }
 
-.transferir-user .navbar img{
+.transferir-user .navbar a {
   position: absolute;
   left: 16px;
+  cursor: pointer;
 }
 
-.transferir-user .btn-container{
+.transferir-user .btn-container {
   width: 100%;
   margin-top: 41px;
+}
+
+/* BUSCAR USUARIO */
+
+.transferir-user .container-buscar {
+  margin-top: 41px;
+  width: 100%;
+}
+
+.transferir-user .container-buscar form {
+  width: 100%;
+}
+
+.transferir-user .container-buscar div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.transferir-user .container-buscar div .h2 {
+  color: #172146;
+}
+
+.transferir-user .container-buscar div input {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: 54px;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #0f6eff;
+  background: #fff;
+  color: var(--Neutral-10, #000);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: all 0.3s ease;
+  margin: 12px 0;
+  background: url("./img/search.svg") no-repeat 20px center;
+  padding-left: 55px;
+}
+
+.transferir-user .container-anteriores {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-top: 82px;
+}
+
+.transferir-user .container-anteriores .h2 {
+  color: #172146;
+}
+
+.transferir-user .container-anteriores .transferencias {
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 5px;
+  border-radius: 5px;
+  border: 2px solid rgba(28, 40, 86, 0.5);
+  background: #fff;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.transferir-user .container-anteriores .transferencias .left{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
 }

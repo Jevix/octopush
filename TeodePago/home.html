@@ -12,9 +12,9 @@
       rel="stylesheet"
     />
     <style>
-        body{
-            background: linear-gradient(199deg, #324798 0%, #101732 65.93%);;
-        }
+      body {
+        background: linear-gradient(199deg, #324798 0%, #101732 65.93%);
+      }
     </style>
   </head>
   <body>
@@ -27,8 +27,10 @@
             <p class="nombre">Nombre Apellido</p>
           </div>
         </div>
-        <div>
-          <img src="./img/salir.svg" alt="" />
+        <div class="right">
+          <a href="./index.html">
+            <img src="./img/salir.svg" alt="" class="salir" />
+          </a>
         </div>
       </nav>
       <div class="dinero">
@@ -36,7 +38,7 @@
         <p class="h1">$50.000</p>
       </div>
       <div class="transacciones">
-        <div>
+        <div onclick="window.location.href='./transferir.html'">
           <img src="./img/transferir.svg" alt="" />
           <p class="hb">Transferir</p>
         </div>
@@ -48,46 +50,46 @@
       <div class="movimientos">
         <p class="h2">Movimientos</p>
         <div class="container">
-            <p class="fecha">Hoy</p>
-            <div class="movimiento">
-                <div class="left">
-                    <img src="./img/user.svg" alt="">
-                    <div>
-                        <p class="h4">Nombre Apellido</p>
-                        <p class="hb">Transferencia enviada</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <p class="h4 text--minus">-$50.000</p>
-                    <p class="hb">00:00</p>
-                </div>
+          <p class="fecha">Hoy</p>
+          <div class="movimiento">
+            <div class="left">
+              <img src="./img/user.svg" alt="" />
+              <div>
+                <p class="h4">Nombre Apellido</p>
+                <p class="hb">Transferencia enviada</p>
+              </div>
             </div>
-            <div class="movimiento">
-                <div class="left">
-                    <img src="./img/user.svg" alt="">
-                    <div>
-                        <p class="h4">Nombre Apellido</p>
-                        <p class="hb">Transferencia recibida</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <p class="h4 text--plus">+$50.000</p>
-                    <p class="hb">00:00</p>
-                </div>
+            <div class="right">
+              <p class="h4 text--minus">-$50.000</p>
+              <p class="hb">00:00</p>
             </div>
-            <div class="movimiento">
-                <div class="left">
-                    <img src="./img/user.svg" alt="">
-                    <div>
-                        <p class="h4">Banco</p>
-                        <p class="hb">Recarga de saldo</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <p class="h4 text--plus">+$50.000</p>
-                    <p class="hb">00:00</p>
-                </div>
+          </div>
+          <div class="movimiento">
+            <div class="left">
+              <img src="./img/user.svg" alt="" />
+              <div>
+                <p class="h4">Nombre Apellido</p>
+                <p class="hb">Transferencia recibida</p>
+              </div>
             </div>
+            <div class="right">
+              <p class="h4 text--plus">+$50.000</p>
+              <p class="hb">00:00</p>
+            </div>
+          </div>
+          <div class="movimiento">
+            <div class="left">
+              <img src="./img/user.svg" alt="" />
+              <div>
+                <p class="h4">Banco</p>
+                <p class="hb">Recarga de saldo</p>
+              </div>
+            </div>
+            <div class="right">
+              <p class="h4 text--plus">+$50.000</p>
+              <p class="hb">00:00</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="background"></div>
