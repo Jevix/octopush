@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .efecto {
+            margin-left: 16px;
+            margin-right: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .efecto-bounce {
+            animation: bounce 10s infinite; /* Controla la duración y repetición del rebote */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 50px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .text-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            transition: height 0.3s ease-in-out;
+            height: 58px; /* Altura inicial */
+        }
+
+        .text-slide {
+            display: flex;
+            flex-direction: column;
+            animation: slide 13s infinite; /* AJUSTA ESTE VALOR */
+        }
+
+        .highlight-text {
+            color: #53C9CB;
+            font-size: 50px;
+            line-height: 58px;
+            margin: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .container {
+    position: relative; /* Ajustado para evitar problemas de posicionamiento */
+    top: 104px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0202;
+    height: 728px;
+}
+
+        /* Animación de deslizamiento hacia arriba con efecto bounce */
+        @keyframes slide {
+            0%, 25% { transform: translateY(0); } 
+            33%, 58% { 
+                transform: translateY(-116.3px); 
+                animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55); 
+            } 
+            66%, 91% { 
+                transform: translateY(-174.9px); 
+                animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55); 
+            } 
+            100% { 
+                transform: translateY(0px); 
+                animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55); 
+            } 
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="efecto">
+       <div class="efecto-bounce"> 
+            <h1>Creadores de</h1>
+       </div>
+        <div class="text-container" id="textContainer">
+            <div class="text-slide" id="textSlide">
+                <p id="highlightText1" class="highlight-text">experiencias digitales</p>
+                <p id="highlightText2" class="highlight-text">páginas web</p>
+                <p id="highlightText3" class="highlight-text">sistemas de gestión</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const textContainer = document.getElementById('textContainer');
+        const highlightTexts = [
+            document.getElementById('highlightText1'),
+            document.getElementById('highlightText2'),
+            document.getElementById('highlightText3'),
+        ];
+
+        let currentIndex = 0;
+        const totalTexts = highlightTexts.length;
+
+        // Función para ajustar la altura del contenedor basado en la frase actual
+        function adjustHeight(index) {
+            let currentHeight = highlightTexts[index].offsetHeight;
+            textContainer.style.height = currentHeight + 'px';
+        }
+
+        // Ajustar la altura al cargar la página
+        adjustHeight(currentIndex);
+
+        // Llamar a la función cada vez que cambia la frase
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalTexts; // Mover al siguiente texto
+            adjustHeight(currentIndex);
+        }, 4332); // AJUSTA ESTE VALOR: Sincronizado con la animación de 10 segundos
+    </script>
+
+</body>
+</html>
