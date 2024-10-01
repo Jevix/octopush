@@ -13,39 +13,43 @@
     />
   </head>
   <body>
-    <section class="section1">
+    <section class="login">
       <img src="./img/logo.png" alt="" />
-    </section>
-    <section class="section2">
-      <form action="" class="section2__form" id="loginForm">
-        <div class="section2__form__container">
-          <label for="username"> DNI </label>
-          <input type="text" id="username" name="username" required />
-          <p class="error">No se encontró usuario con este DNI</p>
-        </div>
-        <div class="section2__form__container">
-          <label for="password">
-            Contraseña
-            <p class="description">Tu fecha de nacimiento (díamesaño)</p>
-          </label>
-          <input
-            type="password"
-            name=""
-            id="password"
-            placeholder="Ej: 25052005"
-          />
-          <img
-            src="./img/viendo.svg"
-            alt=""
-            class="show_password"
-            id="show_password"
-          />
-          <p class="error">Contraseña incorrecta</p>
-        </div>
-        <button type="submit" class="submit submit--off" id="submitButton">
-          Ingresar
-        </button>
-      </form>
+      <section class="section-form">
+        <form action="" class="form" id="loginForm">
+          <div class="form-container">
+            <label for="username"> DNI </label>
+            <input type="text" id="username" name="username" required />
+            <p class="error">No se encontró usuario con este DNI</p>
+          </div>
+          <div class="form-container">
+            <label for="password">
+              Contraseña
+              <p class="description">Tu fecha de nacimiento (díamesaño)</p>
+            </label>
+            <input
+              type="password"
+              name=""
+              id="password"
+              placeholder="Ej: 25052005"
+            />
+            <img
+              src="./img/viendo.svg"
+              alt=""
+              class="show_password"
+              id="show_password"
+            />
+            <p class="error">Contraseña incorrecta</p>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary submit--off"
+            id="submitButton"
+          >
+            Ingresar
+          </button>
+        </form>
+      </section>
     </section>
     <script>
       document
