@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home empresa</title>
+    <title>Home banco</title>
     <link rel="stylesheet" href="./assets/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,33 +18,40 @@
     </style>
   </head>
   <body>
-      <section class="home-user">
+    <section class="home-user">
         <nav class="navbar">
           <div class="left">
-            <img src="./img/empresa-white.svg" alt="" />
+            <img src="./img/banco-white.svg" alt="" />
             <div>
-              <p class="documento">CUIT</p>
-              <p class="nombre">Empresa X</p>
+              <p class="documento">44429156</p>
+              <p class="nombre">Banco</p>
             </div>
           </div>
           <div class="right">
-            <a href="./home.html">
-              <img src="../img/back.svg" alt="" />
+            <a href="./index.html">
+              <img src="./img/salir.svg" alt="" class="salir" />
             </a>
           </div>
         </nav>
         <div class="dinero">
-          <p class="h2">Dinero disponible</p>
+          <p class="h2">Dinero ingresado en caja
+          </p>
           <p class="h1">$156.650.000</p>
         </div>
         <div class="transacciones">
-          <div onclick="window.location.href='./transferir/index.html'">
-            <img src="./img/transferir.svg" alt="" />
-            <p class="hb">Transferir</p>
+          <div>
+            <a href="./cuentas/buscar-cuentas.html"><img src="./img/account.svg" alt="" /></a>
+            <p class="hb">Cuentas</p>
           </div>
           <div>
-            <a href="./qr-empresa.html"><img src="./img/qr.svg" alt="" /></a>
-            <p class="hb">QR</p>
+            <a href="./agregar/index.html"><img src="./img/add-user.svg" alt="" /></a>
+            <p class="hb">Agregar</p>
+          </div>
+          <div>
+            <a href="./emitir/index.html"
+              ><img src="./img/transferir.svg" alt=""
+            /></a>
+            <p class="hb">Emitir dinero</p>
           </div>
         </div>
         <div class="movimientos">
@@ -53,14 +60,14 @@
             <p class="fecha">Hoy</p>
             <div class="movimiento">
               <div class="left">
-                <img src="./img/user.svg" alt="" />
+                <img src="./img/empresa.svg" alt="" />
                 <div>
-                  <p class="h4">Nombre Apellido</p>
-                  <p class="hb">Transferencia enviada</p>
+                  <p class="h5">Empresa X</p>
+                  <p class="hb">Dinero recibido</p>
                 </div>
               </div>
               <div class="right">
-                <p class="h4 text--minus">-$50.000</p>
+                <p class="h4 text--blue">$5.550.000</p>
                 <p class="hb">00:00</p>
               </div>
             </div>
@@ -68,34 +75,41 @@
               <div class="left">
                 <img src="./img/user.svg" alt="" />
                 <div>
-                  <p class="h4">Nombre Apellido</p>
-                  <p class="hb">Transferencia recibida</p>
+                  <p class="h5">Nombre Apellido</p>
+                  <p class="hb">Dinero emitido</p>
                 </div>
               </div>
               <div class="right">
-                <p class="h4 text--plus">+$50.000</p>
+                <p class="h4 text--blue">$5.550.000</p>
                 <p class="hb">00:00</p>
               </div>
             </div>
             <div class="movimiento">
-              <div class="left">
-                <img src="./img/banco.svg" alt="" />
-                <div>
-                  <p class="h4">Banco</p>
-                  <p class="hb">Recarga de saldo</p>
+                <div class="left">
+                  <img src="./img/user.svg" alt="" />
+                  <div>
+                    <p class="h5">Nombre Apellido</p>
+                    <p class="hb">Dinero emitido</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <p class="h4 text--blue">$5.550.000</p>
+                  <p class="hb">00:00</p>
                 </div>
               </div>
-              <div class="right">
-                <p class="h4 text--plus">+$50.000</p>
-                <p class="hb">00:00</p>
-              </div>
-            </div>
             <div class="container-btn">
-              <button class="btn-primary" onclick="window.location.href='./movimientos-empresa.html'">Historial de movimientos</button>
+              <button
+                class="btn-primary"
+                onclick="window.location.href='./movimientos-banco.html'"
+              >
+                Historial de movimientos
+              </button>
             </div>
           </div>
         </div>
         <div class="background"></div>
-      </section>
+    </section>
+    
+
   </body>
 </html>

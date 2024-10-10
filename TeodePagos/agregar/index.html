@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(199deg, #324798 0%, #101732 65.93%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <nav class="navbar">
+        <a href="../home-banco.html">
+          <img src="../img/back.svg" alt="" />
+        </a>
+        <p class="h2">Crear cuenta</p>
+      </nav>
+      <div class="container-white">
+        <div class="container-crear-cuenta">
+          <form action="" id="myForm">
+            <div class="checkboxes">
+              <div>
+                <img src="../img/user.svg" alt="" />
+                <p class="h2 text--darkblue">Usuario</p>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="checkbox1"
+                  class="checkbox"
+                />
+              </div>
+              <div>
+                <img src="../img/banco.svg" alt="" />
+                <p class="h2 text--darkblue">Banco</p>
+                <input
+                  type="checkbox"
+                  name=""
+                  id="checkbox2"
+                  class="checkbox"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="nombre" class="h3 text--black">Nombre</label>
+              <input type="text" name="" id="nombre" />
+            </div>
+            <div>
+              <label for="apellido" class="h3 text--black">Apellido</label>
+              <input type="text" name="" id="apellido" />
+            </div>
+            <div>
+              <label for="dni" class="h3 text--black">DNI</label>
+              <input type="text" name="" id="dni" />
+            </div>
+            <div>
+              <label for="fechaNacimiento" class="h3 text--black"
+                >Fecha de nacimiento</label
+              >
+              <p class="hb text--light">
+                Día mes año sin /, esta sera la contraseña.
+              </p>
+              <input type="text" name="" id="fechaNacimiento" />
+            </div>
+            <button
+              class="btn-primary submit--off"
+              type="submit"
+              id="submitButton"
+              disabled
+            >
+              Crear usuario
+            </button>
+          </form>
+        </div>
+        <div class="background"></div>
+      </div>
+    </section>
+    <script>
+      const checkboxes = document.querySelectorAll(".checkbox");
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          if (this.checked) {
+            const checkbox = this;
+            checkboxes.forEach((otherCheckbox) => {
+              if (otherCheckbox !== this) {
+                otherCheckbox.checked = false;
+              }
+            });
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkbox1 = document.getElementById("checkbox1");
+        const checkbox2 = document.getElementById("checkbox2");
+        const inputs = document.querySelectorAll('#myForm input');
+        const submitBtn = document.getElementById("submitButton");
+
+        function checkForm() {
+          // Verifica que todos los campos de texto estén llenos
+          const allFilled = Array.from(inputs).every(
+            (input) => input.value.trim() !== ""
+          );
+          // Verifica que el checkbox esté marcado
+          const checkbox1Checked = checkbox1.checked;
+          const checkbox2Checked = checkbox2.checked;
+
+          // Habilita el botón si todos los campos están completos y el checkbox marcado
+          if (allFilled && (checkbox1Checked || checkbox2Checked)) {
+            submitBtn.classList.remove("submit--off");
+            submitBtn.classList.add("submit--on");
+            submitBtn.disabled = false;
+          } else {
+            submitBtn.classList.add("submit--off");
+            submitBtn.classList.remove("submit--on");
+            submitBtn.disabled = true;
+          } 
+        }
+
+        // Escucha los cambios en los inputs y en el checkbox
+        inputs.forEach((input) => input.addEventListener("input", checkForm));
+      });
+
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = './banco-creado.html';
+      });
+    </script>
+  </body>
+</html>

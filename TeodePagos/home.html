@@ -37,9 +37,12 @@
         <p class="h2">Dinero disponible</p>
         <p class="h1">$5.150.000</p>
       </div>
+
       <div class="transacciones">
-        <div onclick="window.location.href='./transferir/index.html'">
-          <img src="./img/transferir.svg" alt="" />
+        <div>
+          <a href="./transferir/index.html"
+            ><img src="./img/transferir.svg" alt=""
+          /></a>
           <p class="hb">Transferir</p>
         </div>
         <div>
@@ -47,7 +50,9 @@
           <p class="hb">Tu QR</p>
         </div>
         <div>
-          <a href="./home-empresa.html"><img src="./img/empresa.svg" alt="" /></a>
+          <a href="./home-empresa.html"
+            ><img src="./img/empresa-black.svg" alt=""
+          /></a>
           <p class="hb">Empresa</p>
         </div>
       </div>
@@ -55,51 +60,62 @@
         <p class="h2">Movimientos</p>
         <div class="movimientos-container">
           <p class="fecha">Hoy</p>
-          <div class="movimiento">
+          <div class="componente--movimiento">
             <div class="left">
               <img src="./img/user.svg" alt="" />
-              <div>
-                <p class="h4">Nombre Apellido</p>
+            </div>
+            <div class="right">
+              <div class="arriba">
+                <p class="h5">Nombre Apellido</p>
+                <p class="h4 text--minus">-$5.550.000</p>
+              </div>
+              <div class="abajo">
                 <p class="hb">Transferencia enviada</p>
+                <p class="hb">00:00</p>
               </div>
             </div>
-            <div class="right">
-              <p class="h4 text--minus">-$50.000</p>
-              <p class="hb">00:00</p>
-            </div>
           </div>
-          <div class="movimiento">
+          <div class="componente--movimiento">
             <div class="left">
               <img src="./img/user.svg" alt="" />
-              <div>
-                <p class="h4">Nombre Apellido</p>
-                <p class="hb">Transferencia recibida</p>
-              </div>
             </div>
             <div class="right">
-              <p class="h4 text--plus">+$50.000</p>
-              <p class="hb">00:00</p>
+              <div class="arriba">
+                <p class="h5">Nombre Apellido</p>
+                <p class="h4 text--plus">+$5.550.000</p>
+              </div>
+              <div class="abajo">
+                <p class="hb">Transferencia recibida</p>
+                <p class="hb">00:00</p>
+              </div>
             </div>
           </div>
-          <div class="movimiento">
+          <div class="componente--movimiento">
             <div class="left">
               <img src="./img/banco.svg" alt="" />
-              <div>
-                <p class="h4">Banco</p>
-                <p class="hb">Recarga de saldo</p>
-              </div>
             </div>
             <div class="right">
-              <p class="h4 text--plus">+$50.000</p>
-              <p class="hb">00:00</p>
+              <div class="arriba">
+                <p class="h5">Banco</p>
+                <p class="h4 text--plus">+$5.550.000</p>
+              </div>
+              <div class="abajo">
+                <p class="hb">Recarga de saldo</p>
+                <p class="hb">00:00</p>
+              </div>
             </div>
           </div>
           <div class="container-btn">
-            <button class="btn-primary" onclick="window.location.href='./movimientos.html'">Historial de movimientos</button>
+            <button
+              class="btn-primary"
+              onclick="window.location.href='./movimientos.html'"
+            >
+              Historial de movimientos
+            </button>
           </div>
         </div>
       </div>
+      <div class="background"></div>
     </section>
-    <div class="background"></div>
   </body>
 </html>

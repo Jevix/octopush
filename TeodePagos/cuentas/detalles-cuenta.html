@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuentas</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(199deg, #324798 0%, #101732 65.93%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <nav class="navbar">
+        <a href="./buscar-cuentas.html">
+          <img src="../img/back.svg" alt="" />
+        </a>
+        <p class="h2">Cuentas</p>
+      </nav>
+      <div class="container-white container-datos">
+        <div class="datos-transferencia">
+          <p class="h2 text--darkblue">Tipo de cuenta:</p>
+          <div class="right">
+            <img src="../img/user.svg" alt="" />
+            <p class="h2 text--darkblue">Usuario</p>
+          </div>
+        </div>
+        <div class="datos-transferencia">
+          <p class="h2 text--light">Nombre</p>
+          <p class="h2 text--darkblue">Nahuel</p>
+        </div>
+        <div class="datos-transferencia">
+          <p class="h2 text--light">Apellido</p>
+          <p class="h2 text--darkblue">Andrade</p>
+        </div>
+        <div class="datos-transferencia">
+          <p class="h2 text--light">DNI</p>
+          <p class="h2 text--darkblue">44429156</p>
+        </div>
+        <div class="datos-transferencia">
+          <p class="h2 text--light">Contraseña</p>
+          <div class="right">
+            <p class="h2 text--darkblue" id="password">12052002</p>
+            <img src="../img/viendo.svg" alt="" id="mostrar" />
+          </div>
+        </div>
+        <div class="datos-transferencia">
+          <p class="h2 text--light">Saldo actual</p>
+          <p class="h2 text--blue">$5.550.000</p>
+        </div>
+        <div class="background"></div>
+      </div>
+    </section>
+    <script>
+      // Obtener los elementos de la imagen y el párrafo
+      const icono = document.getElementById("mostrar");
+      const password = document.getElementById("password");
+
+      // Definir la nueva imagen a mostrar cuando se haga clic
+      const iconoCensurado = "../img/censurado.svg";
+      const iconoViendo = "../img/viendo.svg";
+      const textoOriginal = password.textContent;
+
+      let censurado = false;
+
+      // Función que se ejecuta al hacer clic en la imagen
+      icono.addEventListener("click", function () {
+        if (censurado) {
+          // Restaurar el estado original
+          icono.src = iconoViendo;
+          password.textContent = textoOriginal;
+        } else {
+          // Censurar el texto y cambiar la imagen
+          icono.src = iconoCensurado;
+          const textoCensurado = "*".repeat(textoOriginal.length);
+          password.textContent = textoCensurado;
+        }
+
+        // Cambiar el estado
+        censurado = !censurado;
+      });
+
+      function redirigir() {
+        window.location.href = "./detalles-cuenta.html";
+      }
+    </script>
+  </body>
+</html>

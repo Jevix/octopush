@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buscar usuario</title>
+    <title>Emitir dinero</title>
     <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +20,10 @@
   <body>
     <section class="main">
       <nav class="navbar">
-        <a href="./index.html">
+        <a href="../home-banco.html">
           <img src="../img/back.svg" alt="" />
         </a>
-        <p class="h2">Transferir</p>
+        <p class="h2">Emitir dinero</p>
       </nav>
       <div class="container-white">
         <form action="" id="searchForm">
@@ -34,7 +34,6 @@
             name=""
             id="usuario"
             placeholder="Busca por nombre o dni..."
-            class="componente--input--lupa"
           />
           <div class="transferencia" onclick="redirigir()">
             <div class="left">
@@ -42,6 +41,9 @@
                 <p class="h4">Nombre Apellido</p>
                 <p class="hb">DNI</p>
               </div>
+            </div>
+            <div class="right">
+              <p class="h4 text--blue">$50.000</p>
             </div>
           </div>
           <button
@@ -53,39 +55,15 @@
             Buscar cuenta
           </button>
         </form>
-        <div class="container-anteriores">
-          <p class="h2">Anteriores transferencias</p>
-          <div class="componente--usuario">
-            <div class="left">
-              <div>
-                <p class="h5">Nombre Apellido</p>
-                <p class="hb">DNI</p>
-              </div>
-            </div>
-            <div class="right">
-              <p class="h4 text--blue">$5.550.000</p>
-            </div>
+        <div class="aviso-emitir-dinero">
+          <div>
+            <img src="../img/info.svg" alt="" />
           </div>
-          <div class="componente--usuario">
-            <div class="left">
-              <img src="../img/banco.svg" alt="" />
-              <p class="h5">Banco Nº1</p>
-            </div>
-            <div class="right">
-              <p class="h4 text--blue">$5.550.000</p>
-            </div>
-          </div>
-          <div class="componente--usuario">
-            <div class="left">
-              <img src="../img/empresa.svg" alt="" />
-              <div>
-                <p class="h5">Empresa X</p>
-                <p class="hb">CUIT</p>
-              </div>
-            </div>
-            <div class="right">
-              <p class="h4 text--blue">$5.550.000</p>
-            </div>
+          <div>
+            <p class="h2 text--light">
+              El dinero emitido por los bancos no se les es descontado del total
+              de sus cajas.
+            </p>
           </div>
         </div>
         <div class="background"></div>
@@ -109,7 +87,7 @@
       });
 
       function redirigir() {
-        window.location.href = "./seleccionar-monto.html";
+        window.location.href = "./tipo-emision.html";
       }
     </script>
   </body>
