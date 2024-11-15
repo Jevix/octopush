@@ -363,7 +363,7 @@ nav {
   align-items: center;
   gap: 20px;
   align-self: stretch;
-  background-color: #ffffff;
+  background: #ffc400;
 }
 
 .section_3 .titulo {
