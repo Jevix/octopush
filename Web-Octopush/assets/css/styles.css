@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
   padding-top: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   border-radius: 0;
 }
 
@@ -199,8 +199,17 @@ body::-webkit-scrollbar {
   height: 80vh;
   top: 10vh;
   z-index: 200;
+  position: fixed;
 }
+.chico{
 
+  font-size: 20px !important;
+  color:#000 ! important;
+  font-weight: 500 !important;
+}
+.chicox{
+  padding: 13px !important;
+}
 .dropdown-menu--show {
   /* transition: opacity 0.1s ease, visibility 0.1s ease;
   opacity: 1;
@@ -209,17 +218,20 @@ body::-webkit-scrollbar {
   transition: clip-path 0.5s ease; /* Suaviza la revelación */
 }
 
-.dropdown-menu span {
-  color: #528070;
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: #000;
+.dropdown-menu a {
   font-family: Inter;
   font-size: 48px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  cursor: pointer;
+  color: #528070; /* Color de relleno */
+  -webkit-text-stroke-width: 3px; /* Grosor del borde */
+  -webkit-text-stroke-color: transparent; /* Hace el borde transparente inicialmente */
+  
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(51, 204, 153, 0.7) 100%);
+  -webkit-background-clip: text; /* Aplica el gradiente al borde */
+  -webkit-text-fill-color: #528070; /* Mantiene el relleno del texto en color sólido */
 }
+
+
 
 .dropdown-menu button {
   border-radius: 6px;
@@ -736,6 +748,72 @@ h1 {
   line-height: normal;
   cursor: pointer;
 }
+
+/* Efecto hover */
+.section_5 .container_1 .container_btn button:hover {
+ /*  background: #33cc99; Fondo verde al pasar el mouse */
+  color: black; /* Texto blanco */
+  border-color: #33cc99; /* Borde del mismo color que el fondo */
+}
+.container_btn {
+  display: inline-block;
+}
+
+.btn-persiana {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff; /* Fondo blanco inicial */
+  color: #242424; /* Texto oscuro */
+  border: 2px solid rgba(51, 204, 153, 0.5);
+  border-radius: 6px;
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  overflow: hidden; /* Oculta los elementos fuera del botón */
+}
+
+
+/* Texto original */
+.text-original {
+  position: relative;
+  transition: transform 0.3s ease; /* Animación del movimiento */
+  z-index: 2; /* Asegura que esté visible inicialmente */
+}
+
+/* La persiana verde con el nuevo texto */
+.btn-persiana::before {
+  content: "Contactar"; /* Texto verde que aparece */
+  position: absolute;
+  top: 100%; /* Inicialmente fuera del botón */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #33cc99; /* Fondo verde */
+  color: white; /* Texto blanco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  transition: top 0.3s ease; /* Suaviza el deslizamiento de la persiana */
+  z-index: 1; /* Aparece debajo del texto original inicialmente */
+}
+
+/* Efecto hover */
+.btn-persiana:hover .text-original {
+  transform: translateY(-150%); /* Mueve el texto original hacia arriba */
+}
+
+.btn-persiana:hover::before {
+  top: 0; /* Desliza la persiana verde hacia abajo */
+  z-index: 2; /* Asegura que el nuevo texto esté encima después de la animación */
+}
+
 
 /* FOOTER */
 
