@@ -1,0 +1,91 @@
+<html>
+
+<style>
+    /* Ocultar el input */
+.toggle {
+  display: none;
+}
+
+/* Contenedor del servicio */
+.servicio {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Contenedor del contenido del servicio */
+.container_servicio {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #ffa07a; /* Color de fondo */
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+
+/* Estilo del texto dentro del servicio */
+.container_servicio .nombre_servicio {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: white;
+}
+
+.container_servicio .desc_servicio {
+  font-size: 16px;
+  margin: 10px 0;
+  color: white;
+}
+
+/* Botón "open" */
+.open-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.toggle:checked ~ .container_servicio {
+  max-height: 500px; /* Expande el contenedor */
+  padding: 20px; /* Agrega padding */
+}
+
+</style>
+
+<div class="section_3">
+    <div class="servicio">
+      <!-- Input oculto para controlar el estado -->
+      <input type="checkbox" id="toggle_1" class="toggle">
+      <!-- Label que actúa como botón -->
+      <label for="toggle_1" class="open-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+          <path
+            opacity="0.5"
+            d="M1.83337 18.3227C1.83337 10.466 1.83337 6.53767 4.27337 4.09601C6.71671 1.65601 10.6434 1.65601 18.5 1.65601C26.3567 1.65601 30.285 1.65601 32.725 4.09601C35.1667 6.53934 35.1667 10.466 35.1667 18.3227C35.1667 26.1793 35.1667 30.1077 32.725 32.5477C30.2867 34.9893 26.3567 34.9893 18.5 34.9893C10.6434 34.9893 6.71504 34.9893 4.27337 32.5477C1.83337 30.1093 1.83337 26.1793 1.83337 18.3227Z"
+            stroke="black"
+            stroke-width="2.5"
+          />
+          <path
+            d="M25.5001 18.3228H18.5001M18.5001 18.3228H11.5001M18.5001 18.3228V11.3228M18.5001 18.3228V25.3228"
+            stroke="black"
+            stroke-width="3.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </label>
+      <!-- Contenido del servicio -->
+      <div class="container_servicio">
+        <p class="nombre_servicio">Diseño y rediseño web</p>
+        <p class="desc_servicio">
+          Hacemos que tu página destaque con un diseño atractivo, funcional y adaptado a las necesidades de tus usuarios. Rediseñamos sitios existentes para darles nueva vida y convertirlos en experiencias que atraen y retienen.
+        </p>
+      </div>
+    </div>
+  </div>
+  </html>

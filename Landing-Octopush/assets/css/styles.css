@@ -417,19 +417,27 @@ body::-webkit-scrollbar {
   margin-left: 10px;
   margin-top: 20px;
   z-index: 15;
-  background: linear-gradient(to right, red, blue);
-  color: transparent;
+  color: black;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: background-position 1s;
+  transition: all 0.3s ease;
   background-size: 200% 100%;
 } 
-
-/* .expanded_nombre {
-  color: #fff;
-  transition: all 1s ease-in-out;
+@keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+  100% {
+   color: #000;
+  }
+}
+.expanded_nombre {
+  color: #fff !important;
   z-index: 10;
-} */
+  animation: colorChange 0.3s linear infinite;
+}
+
+
 
 .desc_servicio {
   overflow: hidden;

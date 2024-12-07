@@ -19,6 +19,7 @@ function toggleMenu() {
       // Al hacer clic en un cuadrado
       button.addEventListener("click", function () {
         const container_servicio = this.nextElementSibling;
+        const expanded_nombre = container_servicio.previousElementSibling;
         // Si ya hay un cuadrado expandido y no es el mismo que el actual
         const desc_servicio = this.previousElementSibling;
         const nombre_servicio = desc_servicio.previousElementSibling;
@@ -44,6 +45,7 @@ function toggleMenu() {
           }, 100);
         } else {
           container_servicio.classList.add("expanded_div"); // Expandir si está cerrado
+          expanded_nombre.classList.add("expanded_nombre");
           desc_servicio.classList.add("expanded_desc");
           nombre_servicio.classList.add("expanded_nombre");
           button_servicio.classList.add("expanded_button");
