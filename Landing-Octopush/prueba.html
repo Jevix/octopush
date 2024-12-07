@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio de Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #text {
+      font-size: 2rem;
+      font-weight: bold;
+      display: inline-block;
+      color: red; /* Color inicial */
+      position: relative;
+      overflow: hidden;
+    }
+
+    #text span {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      color: blue; /* Color secundario */
+      transform: translateX(-100%);
+      transition: transform 1s ease-in-out;
+    }
+
+    #text.show span {
+      transform: translateX(0);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="text">
+    Texto Dinámico
+    <span>Texto Dinámico</span>
+  </div>
+  <button onclick="changeColor()">Cambiar Color</button>
+
+  <script>
+    let direction = 'toRight'; // Dirección inicial
+
+    function changeColor() {
+      const text = document.getElementById('text');
+      const span = text.querySelector('span');
+
+      // Alternar la dirección del barrido
+      if (direction === 'toRight') {
+        text.classList.add('show'); // Mostrar el color secundario de izquierda a derecha
+        direction = 'toLeft';
+      } else {
+        text.classList.remove('show'); // Mostrar el color secundario de derecha a izquierda
+        direction = 'toRight';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Octopush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <style>
+    .arrow-group {
+    animation: moveInfinite 0.7s linear infinite;
+  }
+
+  @keyframes moveInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  </style>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <img src="img/logo.svg" alt="">
+    </nav>
+
+    <div class="dropdown-menu" id="dropdown-menu">
+      <a>Servicios</a>
+      <a>Portfolio</a>
+      <a>Nosotros</a>
+      <div class="container_btn">
+        <button class="btn-persiana chicox">
+            <span class="text-original chico">Contactar</span>
+        </button>
+    </div>
+    </div>
+    <!-- Primera sección -->
+    <section class="section_1" id="section_1">
+      <div class="container">
+        <div class="efecto">
+          <div class="efecto-bounce">
+            <h1>Creadores de</h1>
+          </div>
+          <div class="text-container" id="textContainer">
+            <div class="text-slide" id="textSlide">
+              <p id="highlightText1" class="highlight-text">
+                experiencias digitales
+              </p>
+              <p id="highlightText2" class="highlight-text">páginas web</p>
+              <p id="highlightText3" class="highlight-text">
+                sistemas de gestión
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Segunda sección -->
+    <section class="section_2" id="section_2">
+      <div class="section_2-presentacion">
+        <img src="img/octopush.svg" alt="Logo" />
+        <div class="section_2-presentacion-texto_1">Somos Octopush</div>
+        <div class="section_2-presentacion-texto_2">
+          Una agencia apasionada por el diseño y el desarrollo web y de software. Nos especializamos en crear soluciones digitales a medida que no solo se ven bien, sino que también funcionan bien.
+        </div>
+      </div>
+      <div class="section_2-trabajos">
+        <div class="section_2-trabajos-trabajo">
+        </div>
+        <div class="section_2-trabajos-trabajo">
+        </div>
+        <div class="section_2-trabajos-trabajo">
+        </div>
+      </div>
+    </section>
+    <!-- Tercera sección -->
+    <div class="section_3" id="section_3">
+      <div class="titulo">Nuestros servicios</div>
+      <div class="servicio">
+        <p class="nombre_servicio">Diseño y rediseño web</p>
+        <p class="desc_servicio">
+          Hacemos que tu página destaque con un diseño atractivo, funcional y
+          adaptado a las necesidades de tus usuarios. Rediseñamos sitios
+          existentes para darles nueva vida y convertirlos en experiencias que
+          atraen y retienen.
+        </p>
+        <div class="open-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="37"
+            height="37"
+            viewBox="0 0 37 37"
+            fill="none"
+          >
+            <path
+              opacity="0.5"
+              d="M1.83337 18.3227C1.83337 10.466 1.83337 6.53767 4.27337 4.09601C6.71671 1.65601 10.6434 1.65601 18.5 1.65601C26.3567 1.65601 30.285 1.65601 32.725 4.09601C35.1667 6.53934 35.1667 10.466 35.1667 18.3227C35.1667 26.1793 35.1667 30.1077 32.725 32.5477C30.2867 34.9893 26.3567 34.9893 18.5 34.9893C10.6434 34.9893 6.71504 34.9893 4.27337 32.5477C1.83337 30.1093 1.83337 26.1793 1.83337 18.3227Z"
+              stroke="black"
+              stroke-width="2.5"
+            />
+            <path
+              d="M25.5001 18.3228H18.5001M18.5001 18.3228H11.5001M18.5001 18.3228V11.3228M18.5001 18.3228V25.3228"
+              stroke="black"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="container_servicio" id="container_servicio_1">
+          <button class="close-btn">
+            <img src="./img/close-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="servicio">
+        <p class="nombre_servicio">Desarrollo de webs</p>
+        <p class="desc_servicio">
+          Creamos sitios web a medida, totalmente adaptados a las necesidades de
+          tu negocio. Desde landing pages hasta sitios corporativos, nos
+          encargamos de que tu presencia online sea sólida y efectiva.
+        </p>
+        <div class="open-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="37"
+            height="37"
+            viewBox="0 0 37 37"
+            fill="none"
+          >
+            <path
+              opacity="0.5"
+              d="M1.83337 18.3227C1.83337 10.466 1.83337 6.53767 4.27337 4.09601C6.71671 1.65601 10.6434 1.65601 18.5 1.65601C26.3567 1.65601 30.285 1.65601 32.725 4.09601C35.1667 6.53934 35.1667 10.466 35.1667 18.3227C35.1667 26.1793 35.1667 30.1077 32.725 32.5477C30.2867 34.9893 26.3567 34.9893 18.5 34.9893C10.6434 34.9893 6.71504 34.9893 4.27337 32.5477C1.83337 30.1093 1.83337 26.1793 1.83337 18.3227Z"
+              stroke="black"
+              stroke-width="2.5"
+            />
+            <path
+              d="M25.5001 18.3228H18.5001M18.5001 18.3228H11.5001M18.5001 18.3228V11.3228M18.5001 18.3228V25.3228"
+              stroke="black"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="container_servicio" id="container_servicio_2">
+          <button class="close-btn">
+            <img src="./img/close-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="servicio">
+        <p class="nombre_servicio">Desarrollo de sistemas</p>
+        <p class="desc_servicio">
+          Desarrollamos sistemas centrados en el negocio, diseñados para mejorar
+          procesos y facilitar la gestión diaria. Soluciones robustas y
+          escalables que se integran perfectamente a tu operación.
+        </p>
+        <div class="open-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="37"
+            height="37"
+            viewBox="0 0 37 37"
+            fill="none"
+          >
+            <path
+              opacity="0.5"
+              d="M1.83337 18.3227C1.83337 10.466 1.83337 6.53767 4.27337 4.09601C6.71671 1.65601 10.6434 1.65601 18.5 1.65601C26.3567 1.65601 30.285 1.65601 32.725 4.09601C35.1667 6.53934 35.1667 10.466 35.1667 18.3227C35.1667 26.1793 35.1667 30.1077 32.725 32.5477C30.2867 34.9893 26.3567 34.9893 18.5 34.9893C10.6434 34.9893 6.71504 34.9893 4.27337 32.5477C1.83337 30.1093 1.83337 26.1793 1.83337 18.3227Z"
+              stroke="black"
+              stroke-width="2.5"
+            />
+            <path
+              d="M25.5001 18.3228H18.5001M18.5001 18.3228H11.5001M18.5001 18.3228V11.3228M18.5001 18.3228V25.3228"
+              stroke="black"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="container_servicio" id="container_servicio_3">
+          <button class="close-btn">
+            <img src="./img/close-btn.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Cuarta sección -->
+    <div class="section_4">
+      <div class="container_1">
+        <div class="container_titulo">
+          <p class="h1">Somos un equipo / Somos un equipo</p>
+        </div>
+        <div class="container_fotos">
+          <div class="container_foto foto_1">
+            <img src="./img/javo.png" alt="">
+          </div>
+          <div class="container_foto foto_2">
+            <img src="./img/croco.png" alt="">
+          </div>
+          <div class="container_foto foto_3">
+            <img src="./img/andrade.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container_2">
+        <p class="hb">
+          Desde Rosario, Argentina, formamos un equipo completo con el cual logramos dar el mejor resultado en cada proyecto. Conectamos creatividad y tecnología para que tu proyecto despegue.
+        </p>
+      </div>
+    </div>
+    <!-- Quinta sección -->
+    <div class="section_5">
+      <div class="container_1">
+        <p class="h1">Creemos tu mejor versión digital</p>
+        <div class="container_btn">
+          <button class="btn-persiana">
+              <span class="text-original">Contactar</span>
+          </button>
+      </div>
+      
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container_1">
+        <a href=""><img src="./img/Linkedin.svg" alt="" /></a>
+        <a href=""><img src="./img/Instagram.svg" alt="" /></a>
+      </div>
+      <div class="container_2">
+        <img src="./img/isotipo-1.svg" alt="" />
+        <img src="./img/isotipo-2.svg" alt="" />
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/index.js"></script>
+    <script>
+      // Agregar un evento de clic al botón de menú
+      const menuButton = document.getElementById("flex-join");
+      menuButton.addEventListener("click", function () {
+        const navbar = document.getElementById("navbar");
+        const openBtn = document.getElementById("open-menu");
+        const closeBtn = document.getElementById("close-menu");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        navbar.classList.toggle("navbar--show");
+        openBtn.classList.toggle("open-menu--show");
+        closeBtn.classList.toggle("close-menu--show");
+        dropdownMenu.classList.toggle("dropdown-menu--show");
+        if (document.body.style.overflow == "hidden") {
+          document.body.style.overflow = "";
+        } else {
+          document.body.style.overflow = "hidden";
+        }
+      });
+    </script>
+  </body>
+</html>
