@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.color-changing-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black; /* Color inicial */
+    background: linear-gradient(90deg, black 50%, white 50%); /* Fondo para animación */
+    background-size: 200% 100%; /* Espacio para desplazar el fondo */
+    background-position: left; /* Inicio en azul */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s ease; /* Suaviza el cambio */
+}
+
+.color-changing-text.active {
+    background-position: right; /* Mueve el color rojo al frente */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}

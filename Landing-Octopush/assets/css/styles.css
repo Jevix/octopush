@@ -417,19 +417,18 @@ body::-webkit-scrollbar {
   margin-left: 10px;
   margin-top: 20px;
   z-index: 15;
-  background: linear-gradient(to right, red, blue);
-  color: transparent;
+  color: black;
   -webkit-background-clip: text;
   background-clip: text;
   transition: background-position 1s;
   background-size: 200% 100%;
-} 
+}
 
-/* .expanded_nombre {
+.expanded_nombre {
   color: #fff;
   transition: all 1s ease-in-out;
   z-index: 10;
-} */
+}
 
 .desc_servicio {
   overflow: hidden;
@@ -490,7 +489,7 @@ body::-webkit-scrollbar {
   display: flex;
   position: absolute;
   bottom: 25px;
-  right: 29px;
+  right: 10px;
   padding: 5px;
   background-color: transparent;
   color: white;
@@ -575,13 +574,13 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   transition: height 0.3s ease-in-out;
-  height: 58px; /* Altura inicial */
+  height: 58px; 
 }
 
 .text-slide {
   display: flex;
   flex-direction: column;
-  animation: slide 13s infinite; /* AJUSTA ESTE VALOR */
+  animation: slide 13s infinite; 
 }
 
 .highlight-text {
@@ -592,8 +591,9 @@ h1 {
   transition: opacity 0.5s ease-in-out;
   font-weight: 600;
 }
+
 .container {
-  position: relative; /* Ajustado para evitar problemas de posicionamiento */
+  position: relative;
   top: 0px;
   left: 0;
   right: 0;
@@ -671,28 +671,67 @@ h1 {
   width: 234px;
   height: 234px;
   flex-shrink: 0;
-  background: url(<path-to-image>) lightgray 100% / cover no-repeat;
+  background: url(<path-to-image>) cover no-repeat;
 }
 
-.section_4 .container_1 .container_fotos .foto_1 {
+.section_4 .container_1 .container_fotos .container_1 img {
   position: absolute;
-  right: -80px;
+  right: 60px;
   top: 0;
   background-color: transparent;
 }
 
-.section_4 .container_1 .container_fotos .foto_2 {
+.section_4 .container_1 .container_fotos .container_1 div {
   position: absolute;
-  right: -160px;
+  right: -30px;
+  top: 100px;
+  background-color: #fc886d;
+  padding: 10px;
+  gap: 10px;
+}
+
+.section_4 .container_1 .container_fotos .container_1 div p{
+  margin: 0;
+}
+
+.section_4 .container_1 .container_fotos .container_2 img {
+  position: absolute;
+  right: -30px;
   top: 180px;
   background-color: transparent;
 }
 
-.section_4 .container_1 .container_fotos .foto_3 {
+.section_4 .container_1 .container_fotos .container_2 div {
   position: absolute;
-  right: -80px;
+  right: 150px;
+  top: 275px;
+  background-color: #fc886d;
+  padding: 10px;
+  gap: 10px;
+}
+
+.section_4 .container_1 .container_fotos .container_2 div p{
+  margin: 0;
+}
+
+.section_4 .container_1 .container_fotos .container_3 img {
+  position: absolute;
+  right: 60px;
   top: 360px;
   background-color: transparent;
+}
+
+.section_4 .container_1 .container_fotos .container_3 div {
+  position: absolute;
+  right: -30px;
+  top: 450px;
+  background-color: #fc886d;
+  padding: 10px;
+  gap: 10px;
+}
+
+.section_4 .container_1 .container_fotos .container_3 div p{
+  margin: 0;
 }
 
 .section_4 .container_2 {
@@ -720,6 +759,9 @@ h1 {
   max-width: 328px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 35px;
 }
 
 .section_5 .container_1 .h1 {
@@ -730,7 +772,7 @@ h1 {
 .section_5 .container_1 .container_btn {
   display: flex;
   width: 100%;
-  justify-content: end;
+  justify-content: center;
 }
 
 .section_5 .container_1 .container_btn button {
@@ -825,23 +867,26 @@ h1 {
   align-items: center;
   align-self: stretch;
   background-color: #3c9;
-  background-image: url("/img/bg-footer.png");
-  background-size: 400% 200%;
-  background-position: 30%; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .footer .container_1 {
   display: flex;
-  padding: 0px 16px 0px 184px;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  width: 70%;
+}
+
+.footer .container_1 div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .container_1 a {
   display: flex;
-  padding: 10px;
+  padding: 13px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -851,4 +896,16 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+
+@media (max-width: 619px){
+
+}
+
+@media (max-width: 791px){
+
+}
+
+@media (max-width: 1439px){
+
 }
