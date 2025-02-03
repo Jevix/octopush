@@ -1,0 +1,206 @@
+
+.navbar {
+    height: 50px;
+    position: fixed;
+    box-sizing: border-box;
+    left: 5%;
+    transition: all 0.5s ease;
+    z-index: 100;
+    border-radius: 12px;
+    margin: 30px auto 0px auto;
+  }
+  
+  .navbar--show {
+    height: 100%;
+    background: radial-gradient(
+      231% 135.8% at 0.9% 2.98%,
+      rgba(83, 201, 203, 0.2) 0%,
+      rgb(0 255 170 / 30%) 100%
+    );
+    transition: all 0.5s ease;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    backdrop-filter: blur(20px);
+    border-radius: 0;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* transition: all 0.5s ease; */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .logooctopush {
+    display: flex;
+    height: 34.424px;
+    justify-content: center;
+    align-items: center;
+    gap: 2.754px;
+    transition: all 0.5s ease;
+  }
+  
+  .inline_objects {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+    z-index: 200;
+  }
+  
+  .close-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+  }
+  .open-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color: var(--Tipografia, #242424);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 76px;
+    padding: 0px 11px;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+  }
+  
+  .menu {
+    z-index: 2;
+    width: 54px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 13px;
+    cursor: pointer;
+    margin-right: 0px;
+  }
+  
+  .close-menu {
+    z-index: 1;
+    transform: translateX(150%);
+    position: absolute;
+  }
+  
+  .open-menu--show {
+    z-index: 1;
+    transform: translateX(-150%);
+  }
+  
+  .close-menu--show {
+    z-index: 104;
+    transform: translateX(0);
+  }
+  
+  .inline_objects.show {
+    padding-top: 30px;
+    padding-right: 16px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.5s ease;
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 33px;
+    height: 80vh;
+    top: 10vh;
+    z-index: 200;
+    position: fixed;
+  }
+  
+  .chico {
+    font-size: 20px !important;
+    color: #000 !important;
+    font-weight: 500 !important;
+  }
+  .chicox {
+    padding: 13px !important;
+  }
+  .dropdown-menu--show {
+    clip-path: inset(0 0 0 0); /* Se muestra completamente */
+    transition: clip-path 0.5s ease; /* Suaviza la revelación */
+  }
+  
+  .dropdown-menu a {
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    color: #528070; /* Color de relleno */
+  }
+  
+  .dropdown-menu button {
+    border-radius: 6px;
+    border: 2px solid rgba(51, 204, 153, 0.5);
+    background: #fff;
+    height: 50px;
+    flex-direction: column;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-position 0.5s ease-out;
+    background-size: 100% 200%; /* Duplicamos el tamaño vertical del fondo */
+    background-position: 0 100%; /* Comienza desde abajo */
+    clip-path: inset(0 0 0 0); /* Oculto inicialmente */
+    transition: clip-path 0.5s ease; /* Suaviza la revelación */
+  }
+  
+  .content {
+    margin-top: 70px;
+    padding: 20px;
+  }
+  
+  .flex-join {
+    position: relative;
+    width: 77px;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .hb {
+    font-family: Inter;
+    display: -webkit-box;
+    flex: 1 0 0;
+    color: #fff;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .h1 {
+    color: #fff;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  

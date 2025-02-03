@@ -1,0 +1,55 @@
+@media (min-width: 620px) {
+  
+    /* SOMOS OCTOPUSH 
+    /* NUESTROS SERVICIOS */
+    .servicio {
+      padding: 25px 23px;
+      display: flex;
+    }
+  
+    #servicio_3{
+      align-items: end;
+    }
+  
+    #servicio_1{
+      align-items: end;
+    }
+  
+    .servicio div{
+      max-width: 540px;
+    }
+  
+    /* FOOTER */
+    .footer .container_1 a p {
+      display: block;
+    }
+    
+    .footer .container_1 .flecha-link {
+      display: block;
+    }
+  }
+
+  .imagennueva {
+    display: none; /* Ocultar imagen por defecto */
+}
+
+@media (min-width: 791px) {
+    .imagennueva {
+        display: block; /* Mostrar imagen cuando el ancho sea 791px o mayor */
+        height: 230px;
+    }
+    .container_servicio{
+      display: flex;
+      flex-direction: row;}
+}
+
+  
+  @media (min-width: 824px) {
+    .section_5 .container_1{
+      max-width: 833px;
+    }
+    .section_5 .container_1 .h1{
+      font-size: 96px;
+    }
+  }
+  

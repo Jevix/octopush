@@ -1,0 +1,131 @@
+.arrow-group {
+  animation: moveInfinite 0.7s linear infinite;
+}
+
+@keyframes moveInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+.container_titulo {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-text {
+  display: flex;
+  gap: 2rem; /* Espacio entre los textos duplicados */
+  animation: marquee 10s linear infinite;
+}
+
+/* Animación del texto */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 619px) {
+  @keyframes slide {
+    0%,
+    25% {
+      transform: translateY(0);
+    }
+    33%,
+    58% {
+      transform: translateY(-116.3px);
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    66%,
+    91% {
+      transform: translateY(-174.9px);
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    100% {
+      transform: translateY(0px);
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+  }
+}
+
+
+@media (min-width: 620px) and (max-width: 823px) {
+  /* Agrandado texto */
+  .efecto-bounce h1{
+    font-size: 84.6px !important;
+  }
+  .highlight-text {
+   font-size: 84.6px !important;
+   line-height: 96.79px !important;
+  }
+  .text-slide{
+    max-width: 555px !important;
+    
+  }
+
+/* Nuevos movimientos en pantalla */
+  @keyframes slide {
+    0%,
+    25% {
+      transform: translateY(-16px);
+    }
+    33%,
+    58% {
+      transform: translateY(-200.3px);
+    }
+    66%,
+    91% {
+      transform: translateY(-300.9px);
+    }
+    100% {
+      transform: translateY(-16px);
+    }
+  }
+}
+
+@media (min-width: 824px){
+  /* Agrandado texto */
+  .efecto-bounce h1{
+    font-size: 96px !important;
+  }
+  .highlight-text {
+   font-size: 96px !important;
+   line-height: 109.87px !important;
+  }
+  .text-slide{
+    max-width: 630px !important;
+    
+  }
+
+/* Nuevos movimientos en pantalla */
+  @keyframes slide {
+    0%,
+    25% {
+      transform: translateY(-16px);
+    }
+    33%,
+    58% {
+      transform: translateY(-220.3px);
+    }
+    66%,
+    91% {
+      transform: translateY(-345px);
+    }
+    100% {
+      transform: translateY(-16px);
+    }
+  }
+}
+ 
+
+
+
